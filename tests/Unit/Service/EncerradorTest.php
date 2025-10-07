@@ -8,17 +8,22 @@ use PHPUnit\Framework\TestCase;
 use Alura\Leilao\Dao\Leilao as LeilaoDao;
 use Alura\Leilao\Service\EnviadorEmail;
 use DomainException;
-use PDO;
-use PHPUnit\Framework\MockObject\MockObject;
+use Alura\Leilao\Model\Leilao as ModelLeilao;
 
 class LeilaoDaoMock extends LeilaoDao
 {
 
     private $leiloes = [];
 
-    public function salva(Leilao $leilao): void
+    public function salva(Leilao $leilao): ModelLeilao
     {    
         $this->leiloes[] = $leilao;
+        
+        return new ModelLeilao(
+            $leilao->recuperarDescricao(), 
+            $leilao->recuperarDataInicio(), 
+            $this->con->lastInsertId()
+        );
     }
     public function atualiza(Leilao $leilao)
     {  

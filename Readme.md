@@ -14,6 +14,14 @@
 - Definir expectativas e verificações nos testes pelo dublê
 - Saiber quais são as dificuldades na hora de testar
 
+### Testes de integração com PHP: testando o acesso à API e ao banco de dados
+
+- Aprender como testar o acesso ao banco de dados
+- Garantir a integridade e desempenho nos seus testes
+- Saiber as vantagens e desvantagens de testes intermediários
+- Criar e executar suítes de testes
+- Testar a sua API com Postman
+
 ## 🖥️ Tecnologias
 
 <div>

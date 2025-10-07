@@ -15,7 +15,7 @@ class Leilao
     /** @var int */
     private $id;
 
-    public function __construct(string $descricao, \DateTimeImmutable $dataInicio = null, int $id = null)
+    public function __construct(string $descricao, ?\DateTimeImmutable $dataInicio = null, ?int $id = null)
     {
         $this->descricao = $descricao;
         $this->finalizado = false;
